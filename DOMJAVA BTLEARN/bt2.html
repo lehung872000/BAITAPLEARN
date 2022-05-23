@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>Caculator</b></h1>
+    
+    <input type="text" id="so_1" size="15">
+    <input type="text" id="so_2" size="15"> <br> <br>
+    <button onclick="ham_nhan()">Multip(*)</button>
+    <button onclick="ham_chia()">Division(:)</button>
+    <button onclick="ham_cong()">Addition(+)</button>
+    <button onclick="ham_tru()">subtraction(-)</button>
+    <p>Result: <span id="result"></span></p>
+
+ 
+    
+</body>
+<script>
+     
+
+    function ham_nhan()
+    { let x = document.getElementById("so_1").value
+    x = parseFloat(x)
+    let y = document.getElementById("so_2").value
+  y = parseFloat(y)
+    let a= x * y
+    document.getElementById("result").innerHTML=a
+    }
+    function ham_chia()
+    { let x = document.getElementById("so_1").value
+    x = parseFloat(x)
+    let y = document.getElementById("so_2").value
+  y = parseFloat(y)
+    let a= x / y
+    document.getElementById("result").innerHTML=a
+    }
+
+    function ham_cong()
+    { let x = document.getElementById("so_1").value
+    x = parseFloat(x)
+    let y = document.getElementById("so_2").value
+  y = parseFloat(y)
+    let a= x + y
+    document.getElementById("result").innerHTML=a
+    }
+
+    function ham_tru()
+    { let x = document.getElementById("so_1").value
+    x = parseFloat(x)
+    let y = document.getElementById("so_2").value
+  y = parseFloat(y)
+    let a= x - y
+    document.getElementById("result").innerHTML=a
+    }
+
+</script>
+</html>

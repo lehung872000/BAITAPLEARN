@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {padding-top:50px}
+          </style>
+</head>
+<body>
+    <h2>sample screen:</h2>
+    <input type="text" id="nhap" >
+    <input type="button" value="Add" onclick="get_num()" >
+    <input type="button" value="display" onclick="display()" ><br>
+    <hr>
+
+<div id="dis"></div>
+    
+</body>
+<script>
+    var a = 0
+    var arr=[]
+
+    function get_num()
+    {
+        
+         arr[a]=document.getElementById("nhap").value;
+        a++
+        document.getElementById("nhap").value= " "
+    }
+    function display()
+    {
+let i=0
+let kq=" "
+for (i=0;i<arr.length;i++)
+{
+kq += "element "+i+"="+arr[i]+"<br>"
+}
+document.getElementById("dis").innerHTML=
+    }
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .focus{
+background-color:darkslategrey;
+border-color: white;
+color: white;
+}
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td> <p><b> Amuont</b></p></td>
+                <td colspan="2"> <h5><b> From Currency</b></h5></td>
+                <td colspan="2"> <h5><b> To Currency</b></h5></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="amount" id="amount" size="10"></td>
+                <td colspan="2"> 
+                    <select  id="vnd" width="20">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                       
+                        <option value="GBP">GBP</option>
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select  id="usd" >
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                       
+                        <option value="GBP">GBP</option>
+                    </select>
+                </td>
+                <td>                   
+                     
+                    <input type="button" value="convert" class= "focus" onclick="get_money()">
+                    
+                </td>
+            </tr>
+            <tr >
+        <td colspan="4"><p style="color:blue ;">Result <span style="color:blue ;"id="convert"></span></p></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function get_money()
+    {
+        var doi
+        let m = document.getElementById("amount").value
+    m=parseInt(m)  
+    let d = document.getElementById("vnd").value
+    let u = document.getElementById("usd").value
+    if(d=='VND')
+       {
+           if (u=='USD')
+           {
+doi=m/23000
+document.getElementById("convert").innerHTML=doi+' USD' ;
+
+           }
+           if (u=='GBP')
+           {
+doi=m/30000
+document.getElementById("convert").innerHTML=doi+' GBP' ;
+
+           }
+           if (u=='VND')
+           {
+doi=m
+document.getElementById("convert").innerHTML=doi+' VND' ;
+
+           }
+       }
+
+      else if(d=='USD')
+       {
+           if (u=='VND')
+           {
+doi=m*23000
+document.getElementById("convert").innerHTML=doi+' VND' ;
+
+           }
+           if (u=='GBP')
+           {
+doi=m*23000/30000
+document.getElementById("convert").innerHTML=doi+' GBP' ;
+
+           }
+           if (u=='USD')
+           {
+doi=m
+document.getElementById("convert").innerHTML=doi+' USD' ;
+
+           }
+       }
+    }
+    </script>
+</html>

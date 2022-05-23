@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 800px;
+            height: 300px;
+            border: 2px solid silver;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td {
+            border: 2px solid silver;
+        }
+        .tab{
+            margin-left:  50px; ;
+        }
+    </style>
+</head>
+<body>
+   <p class="tab">Bang Cuu Chuong</p>
+  
+   <p >so hang</p>
+    <input type="text"  id="hang" >
+   <p >  cot </p>
+    <input type="text"  id="cot" ><br><br>
+   <input type="button" value="hien thi bang" onclick="display()">
+        <div id="bang"></div>
+   
+</body>
+<script>
+   function display ()
+
+    {var row= document.getElementById("hang").value
+    row=parseInt(row)
+    var col= document.getElementById("cot").value
+    col=parseInt(col)
+    var data = "<table>"
+        //gan bien bang table
+    for(var i = 1; i <= row; i++) {
+        data += "<tr>"
+        for(var j = 2; j <= col; j++) {
+            data += "<td>" + i + " x " + j + " = " + j*i + "</td>"
+        }
+        data += "</tr>"
+    }
+    data += "</table>"
+    document.getElementById("bang").innerHTML = data
+}
+</script>
+</html>

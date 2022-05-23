@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="res"></p>
+</body>
+<script>
+    let str=prompt('nhap chuoi:')
+    
+ let UP='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ let DOW='abcdefghijklmnopqrstuvwxyz'
+    let arr=[]
+  
+    for (let i=0;i<str.length;i++)
+    {if ( UP.indexOf(str[i])!=-1)  //trong chuoi str có ki tự trong mảng UP
+
+    {
+       arr.push(str[i].toLowerCase())
+    }
+   else if ( DOW.indexOf(str[i])!=-1) 
+   {arr.push(str[i].toUpperCase())}
+   else
+   {
+       arr.push(str[i])
+   }
+    
+    }
+    document.getElementById("res").innerHTML=arr.join("")
+    //document.write ()
+</script>
+</html>

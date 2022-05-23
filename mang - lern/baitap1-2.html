@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="nhap"> 
+   <input type="button" value="nhap mang" onclick="add_arr()"><br> <br>
+   <input type="button" value="display" onclick="display()" ><br><br>
+   <div id="display"></div>
+</body>
+<script>
+var arr=[]
+var i=0
+    
+    function add_arr()
+    {
+       arr[i]=document.getElementById("nhap").value 
+       arr[i]=parseInt(arr[i])
+i++    
+document.getElementById("nhap").value=""
+    }
+
+function display()
+{
+  
+   var kq=""
+   for (let j=0;j<arr.length;j++)
+   {
+if(check_odd(j))
+{
+  kq += arr[j]+"-"}
+else 
+{kq += arr[j]
+
+ }
+}
+document.getElementById("display").innerHTML=kq}
+
+
+ function check_odd(k)
+ {
+  
+if((arr[k]%2==0)&&(arr[k+1]%2==0))
+{//2 so lien tiep chan
+return true
+}
+else
+{return false}
+ }
+    
+
+</script>
+</html>

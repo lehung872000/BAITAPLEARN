@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+<h3><b>Gia Hoa Qủa</b> </h3>
+<br>
+<input type="text" id="fruit">
+<input type="button" value="permit" onclick="get_fruid()">
+<br>
+<h4><p id="result"></p></h4>
+    </form>
+</body>
+<script>
+   
+    function get_fruid()
+    { 
+  
+    let y = document.getElementById("fruit").value
+
+    switch (y)
+    {
+        case 'xoai':
+        document.getElementById("result").innerHTML=20000+' VNĐ/kg' ;
+        break;
+
+        case 'cam':
+        document.getElementById("result").innerHTML=40000+' VNĐ/kg' ;
+        break;
+
+        case 'tao':
+        document.getElementById("result").innerHTML=30000+' VNĐ/kg' ;
+        break;
+
+        case 'duahau':
+        document.getElementById("result").innerHTML=20000+' VNĐ/kg' ;
+        break;
+        case 'chom chom':
+        document.getElementById("result").innerHTML=40000+' VNĐ/kg' ;
+        break;
+    }
+    
+   // document.getElementById("result").innerHTML=traicay
+    
+  
+
+    }
+</script>
+</html>

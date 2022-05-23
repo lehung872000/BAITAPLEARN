@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+        <td colspan="3"><h1><b> TÍNH ĐIỂM ĐH KHỐI D </b></h1></td>
+    </tr>
+    <tr>
+     <td><p>TOAN </p></td>
+     <td><input type="text" id="toan"></td>  
+     <td></td>
+    </tr>
+
+
+<tr>
+    <td><p>VAN </p></td>
+    <td><input type="text" id="van"></td>  
+    <td></td>
+   </tr>
+   <tr>
+    <td><p>ANH </p></td>
+    <td><input type="text" id="anh"></td>  
+    <td></td>
+   </tr>
+<tr>
+    <td><p>KHU VUC</p></td>
+<td><select id="khuvuc"  >
+    <option value="KV1">KV1</option>
+    <option value="KV2">KV2</option>
+    <option value="KV2-NT">KV2-NT</option>
+    <option value="KV3">KV3</option>
+</select>
+</td>
+<td></td>
+</tr>
+<tr>
+   <td> <input type="button" value="tinhdiem" onclick="get_area()"></td>
+   <td></td>
+   <td></td>
+</tr>
+
+ <tr>
+     <td colspan="3">  <h2 style="color: red;">Điểm của bạn là <span style="color: red;" id="result"> </span></h2></td>
+ </tr>
+   
+</table>
+    </form>
+</body>
+<script>
+function get_area()
+{ 
+    let t = document.getElementById("toan").value
+    t=parseInt(t)                       
+    let v = document.getElementById("van").value
+    v=parseInt(v)
+    let a = document.getElementById("anh").value
+    a=parseInt(a)
+    let kv = document.getElementById("khuvuc").value
+
+    
+    switch (kv)
+    {
+        case 'KV1':
+            var diem=(t+v+a+0.75);
+            document.getElementById("result").innerHTML= diem+ ' điểm'   ;
+            //
+
+            break;
+
+            case 'KV2':
+            var diem=(t+v+a+0.5);
+            document.getElementById("result").innerHTML= diem + ' điểm';
+            break;
+            case 'KV2-NT':
+            var diem=(t+v+a+0.25);
+            document.getElementById("result").innerHTML= diem + ' điểm';
+            break;
+            case 'KV3':
+            var diem=(t+v+a);
+            document.getElementById("result").innerHTML= diem+ ' điểm';
+            break;
+    }
+    
+}
+</script>
+</html>

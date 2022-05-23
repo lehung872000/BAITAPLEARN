@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           form
+           {
+            justify-content:flex-start
+           }
+        
+       
+        #number_in {
+            margin-bottom: 5px;
+           
+        }
+     
+        .but {
+          background-color: blue; 
+          color: white; 
+          width: 30px;
+          margin-left:150px ;
+          
+          margin-right:0px ;
+        }
+    </style>
+</head>
+<body>
+    <form  >
+
+     <p>nhap vao 1 so nguyen duong </p>  
+    <input type="text" id="number_in" size="30px"> <br>
+    <input type="button" value="ok" onclick="get_num()" class="but" >
+    <input type="reset" value="cance" > <br>
+    
+    <p>so dao nguoc la :<span id="result"></span></p>
+    <input type="button" value="ok" onclick="clear_ok()"  class="but" >
+</form>
+</body>
+<script>
+    function get_num()
+    {var num= document.getElementById("number_in").value
+    num=parseInt(num)
+    let num1
+    let num2
+    let nguoc=""
+    while(num>0)
+    {
+       num1= num % 10
+      // alert(num1)
+       num=Math.floor(num/10)
+       
+      // alert(num)
+       nguoc+= num1
+    }
+
+    document.getElementById("result").innerHTML= nguoc
+}
+function clear()
+{
+num=''
+document.getElementById("number_in").innerHTML=num
+}
+function clear_ok()
+{document.getElementById("result").innerHTML= ""
+
+}
+</script>
+</html>
