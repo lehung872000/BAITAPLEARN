@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <style type="text/css">
+        .start {
+            padding-top: 10px;
+            margin-left: 50px;
+        }
+        
+        .setscore1 {
+            margin-top: 20px;
+            margin-left: 50px;
+            color: blue;
+        }
+        
+        .score {
+            margin-top: 20px;
+            margin-left: 50px;
+            color: red;
+        }
+        
+        .over {
+            margin-left: 220px;
+            font-size: 20pt;
+            color: red;
+        }
+        
+        .win {
+            margin-left: 220px;
+            font-size: 20pt;
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<div class="start">
+    <label for="">Level:</label>
+    <select id="level">
+                  <option value="easy">level 1</option>
+                  <option value="medium">level 2</option>
+                  <option value="hard">level 3</option>
+              </select>
+    <button type="button" name="button" id="start">Start</button>
+</div>
+
+
+<div class="score">
+    Score: <b id="score">0</b>
+</div>
+<div id="gameover" class="over">
+</div>
+<div id="win" class="win">
+</div>
+<br>
+
+<body>
+    <script src="sketch.js"></script>
+    <script src="ship.js"></script>
+</body>
+<script src="sketch.js"></script>
+
+<script src="ship.js"></script>
+<script src="chicken.js"></script>
+
+</html>
